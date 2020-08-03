@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "R9OWZRlQTpVZ/hDG7zexWn+wtcopVOpBuwqnwXKQRUNN1OPe25OuNBcmbPyv3bjE2QA/0qV4m7JOg+ETe2HEsg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\TryOut.NotificationPattern.Api\\TryOut.NotificationPattern.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AMcom\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

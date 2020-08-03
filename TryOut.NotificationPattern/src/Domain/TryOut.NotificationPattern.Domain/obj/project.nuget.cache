@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JEiaIRR21hoAidWAhzOlzb9JLgmEFDkSTlofRvCPJjsWok3BSnaV8rsh4EtvBIbugEUIE6tJESR/cGcNP7+oVg==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AMcom\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\AMcom\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

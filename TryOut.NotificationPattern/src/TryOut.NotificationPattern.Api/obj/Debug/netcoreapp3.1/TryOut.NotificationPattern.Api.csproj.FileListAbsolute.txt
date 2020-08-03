@@ -1,0 +1,10 @@
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.exe
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.csprojAssemblyReference.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.AssemblyInfoInputs.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.AssemblyInfo.cs
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.RazorTargetAssemblyInfo.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\staticwebassets\TryOut.NotificationPattern.Api.StaticWebAssets.Manifest.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\staticwebassets\TryOut.NotificationPattern.Api.StaticWebAssets.xml

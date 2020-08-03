@@ -1,0 +1,5 @@
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.csprojAssemblyReference.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.AssemblyInfoInputs.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.AssemblyInfo.cs

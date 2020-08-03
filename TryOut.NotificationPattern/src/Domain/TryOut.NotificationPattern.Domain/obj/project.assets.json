@@ -1,0 +1,170 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FluentValidation/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "Flunt/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
+      "TryOut.NotificationPattern.TryFluentValidation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "FluentValidation": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/TryOut.NotificationPattern.TryFluentValidation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TryOut.NotificationPattern.TryFluentValidation.dll": {}
+        }
+      },
+      "TryOut.NotificationPattern.TryFlunt/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Flunt": "1.0.5"
+        },
+        "compile": {
+          "bin/placeholder/TryOut.NotificationPattern.TryFlunt.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TryOut.NotificationPattern.TryFlunt.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/9.0.1": {
+      "sha512": "GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.9.0.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "Flunt/1.0.5": {
+      "sha512": "2p1B/LLsMf0bGwyMQK48/278OXTodXn3HyTU1v7fr/x0bNfrVSNC1Do1PxbgiOlDLChtAbtt1kPgXFqUnGAagg==",
+      "type": "package",
+      "path": "flunt/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.1.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
+    "TryOut.NotificationPattern.TryFluentValidation/1.0.0": {
+      "type": "project",
+      "path": "../../FluentValidation/TryOut.NotificationPattern.TryFluentValidation/TryOut.NotificationPattern.TryFluentValidation.csproj",
+      "msbuildProject": "../../FluentValidation/TryOut.NotificationPattern.TryFluentValidation/TryOut.NotificationPattern.TryFluentValidation.csproj"
+    },
+    "TryOut.NotificationPattern.TryFlunt/1.0.0": {
+      "type": "project",
+      "path": "../../Flunt/TryOut.NotificationPattern.TryFlunt/TryOut.NotificationPattern.TryFlunt.csproj",
+      "msbuildProject": "../../Flunt/TryOut.NotificationPattern.TryFlunt/TryOut.NotificationPattern.TryFlunt.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "FluentValidation >= 9.0.1",
+      "TryOut.NotificationPattern.TryFluentValidation >= 1.0.0",
+      "TryOut.NotificationPattern.TryFlunt >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\AMcom\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj",
+      "projectName": "TryOut.NotificationPattern.Domain",
+      "projectPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj",
+      "packagesPath": "C:\\Users\\AMcom\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\AMcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\FluentValidation\\TryOut.NotificationPattern.TryFluentValidation\\TryOut.NotificationPattern.TryFluentValidation.csproj": {
+              "projectPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\FluentValidation\\TryOut.NotificationPattern.TryFluentValidation\\TryOut.NotificationPattern.TryFluentValidation.csproj"
+            },
+            "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Flunt\\TryOut.NotificationPattern.TryFlunt\\TryOut.NotificationPattern.TryFlunt.csproj": {
+              "projectPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Flunt\\TryOut.NotificationPattern.TryFlunt\\TryOut.NotificationPattern.TryFlunt.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[9.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
