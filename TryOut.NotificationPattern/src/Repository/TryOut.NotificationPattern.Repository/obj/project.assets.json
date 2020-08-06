@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FluentValidation/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "TryOut.NotificationPattern.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "FluentValidation": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/TryOut.NotificationPattern.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TryOut.NotificationPattern.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/9.0.1": {
+      "sha512": "GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.9.0.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "TryOut.NotificationPattern.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/TryOut.NotificationPattern.Domain/TryOut.NotificationPattern.Domain.csproj",
+      "msbuildProject": "../../Domain/TryOut.NotificationPattern.Domain/TryOut.NotificationPattern.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 3.1.6",
+      "TryOut.NotificationPattern.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\AMcom\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Repository\\TryOut.NotificationPattern.Repository\\TryOut.NotificationPattern.Repository.csproj",
+      "projectName": "TryOut.NotificationPattern.Repository",
+      "projectPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Repository\\TryOut.NotificationPattern.Repository\\TryOut.NotificationPattern.Repository.csproj",
+      "packagesPath": "C:\\Users\\AMcom\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Repository\\TryOut.NotificationPattern.Repository\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\AMcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj": {
+              "projectPath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[3.1.6, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

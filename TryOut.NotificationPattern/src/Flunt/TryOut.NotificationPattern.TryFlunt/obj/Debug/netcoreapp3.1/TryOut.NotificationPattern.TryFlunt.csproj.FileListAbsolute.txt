@@ -1,5 +1,0 @@
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Flunt\TryOut.NotificationPattern.TryFlunt\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.deps.json
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Flunt\TryOut.NotificationPattern.TryFlunt\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.dll
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Flunt\TryOut.NotificationPattern.TryFlunt\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.csprojAssemblyReference.cache
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Flunt\TryOut.NotificationPattern.TryFlunt\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.AssemblyInfoInputs.cache
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Flunt\TryOut.NotificationPattern.TryFlunt\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFlunt.AssemblyInfo.cs

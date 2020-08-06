@@ -1,23 +1,12 @@
 ﻿using System;
-using TryOut.NotificationPattern.TryFluentValidation.Domain;
+using TryOut.NotificationPattern.Domain.Abstractions;
 
 namespace TryOut.NotificationPattern.Domain.FluentValidation
 {
-    public class Customer : Entity<long, Customer, CustomerValidator>
+    public class Customer : EntityValidatedWithFluentValidation<long, Customer, CustomerValidator>
     {
         public const short DocumentMaxLength = 11;
         public const short NameMaxLength = 60;
-
-        public Customer(long id, DateTime birth, string document, string name)
-            : base(id)
-        {
-            Active = true;
-            Birth = birth;
-            Document = document;
-            Name = name;
-
-            Validate(new CustomerValidator());
-        }
 
         public Customer(long id, DateTime birth, string document, string name, decimal initialCredits)
             : base(id)
@@ -27,6 +16,7 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
             Document = document;
             Name = name;
             Credits = initialCredits;
+
             Validate(new CustomerValidator());
         }
 
@@ -37,10 +27,46 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
         public string Document { get; private set; }
         public string Name { get; private set; }
 
-        public void AddCredits(decimal value) => Credits += value;
+        public void AddCredits(decimal value)
+        {
+            // TO DO
+            // Put a rule to validate value parameter. It can't be less than 0.
 
-        public void DecressCredits(decimal value) => Credits -= value;
+            Credits += value;
+        }
 
-        public void Inative() => Active = false;
+        public void ChangeToAdmin()
+        {
+            // TO DO
+            // Put a rule to validate the action. It will be blocked if Active is false.
+
+            Admin = true;
+        }
+
+        public void DecressCredits(decimal value)
+        {
+            // TO DO
+            // Put a rule to validate value parameter. It can't be less than 0.
+
+            Credits -= value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Customer entityToCompare)
+                return entityToCompare.Id == Id;
+
+            return false;
+        }
+
+        public override int GetHashCode() => Id.GetHashCode();
+
+        public void Inative()
+        {
+            // TO DO
+            // Put a rule to validate the action. It will be blocked if Admin is true.
+
+            Active = false;
+        }
     }
 }

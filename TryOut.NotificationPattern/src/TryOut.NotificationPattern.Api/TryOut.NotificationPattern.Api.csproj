@@ -5,14 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Flunt\" />
-    <Folder Include="Commands\FluentValidation\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Handlers\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="5.3.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\TryOut.NotificationPattern.Repository\TryOut.NotificationPattern.Repository.csproj" />
   </ItemGroup>
 
 </Project>

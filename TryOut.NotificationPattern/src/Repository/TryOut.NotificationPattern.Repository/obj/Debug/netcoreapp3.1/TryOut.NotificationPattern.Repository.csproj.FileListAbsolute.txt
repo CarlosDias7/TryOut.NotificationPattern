@@ -1,0 +1,12 @@
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.csprojAssemblyReference.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.AssemblyInfoInputs.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.AssemblyInfo.cs
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.deps.json
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.pdb
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.pdb
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.csproj.CopyComplete
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.pdb
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Repository\TryOut.NotificationPattern.Repository\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Repository.csproj.CoreCompileInputs.cache

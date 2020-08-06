@@ -1,5 +1,0 @@
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\FluentValidation\TryOut.NotificationPattern.TryFluentValidation\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.deps.json
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\FluentValidation\TryOut.NotificationPattern.TryFluentValidation\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.dll
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\FluentValidation\TryOut.NotificationPattern.TryFluentValidation\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.AssemblyInfoInputs.cache
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\FluentValidation\TryOut.NotificationPattern.TryFluentValidation\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.AssemblyInfo.cs
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\FluentValidation\TryOut.NotificationPattern.TryFluentValidation\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.TryFluentValidation.csprojAssemblyReference.cache
