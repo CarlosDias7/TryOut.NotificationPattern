@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cBd1V1VHTlDBtpufVyPLcdN4H2xD0WRgMW2GJtq4Kj/gpgxqLPfxkWWER6DxXHRFrXe6vyGY0S/d9v/4f/PCxQ==",
+  "dgSpecHash": "LBGVsHtGIIr9yyEyx+C9CfYeYtSzI8ZtjOcTmJx0KAPrMD9oMB9ntZdz1xngPMBE20V1XleXAtAuSLRwVisKHQ==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Domain\\TryOut.NotificationPattern.Domain\\TryOut.NotificationPattern.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AMcom\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512"
+    "C:\\Users\\AMcom\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\AMcom\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
   ],
   "logs": []
 }

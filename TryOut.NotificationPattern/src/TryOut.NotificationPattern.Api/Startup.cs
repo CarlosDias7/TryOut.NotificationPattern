@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.OpenApi.Models;
 using System.Globalization;
 using System.Reflection;
+using TryOut.NotificationPattern.Api.Filters;
+using TryOut.NotificationPattern.Api.Notifications.FluentValidation;
 using TryOut.NotificationPattern.Repository.Register;
 
 namespace TryOut.NotificationPattern.Api
@@ -39,7 +41,11 @@ namespace TryOut.NotificationPattern.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddMvc(m => { m.EnableEndpointRouting = false; })
+                .AddMvc(m =>
+                {
+                    m.EnableEndpointRouting = false;
+                    m.Filters.Add<NotificationFilter>();
+                })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddApiVersioning(o =>
@@ -55,12 +61,18 @@ namespace TryOut.NotificationPattern.Api
             });
 
             ConfigureSwagger(services);
+            ConfigureNotification(services);
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddRepository();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
-        public void ConfigureSwagger(IServiceCollection services)
+        private void ConfigureNotification(IServiceCollection services)
+        {
+            services.AddScoped<INotificationContextForFluentValidation, NotificationContextForFluentValidation>();
+        }
+
+        private void ConfigureSwagger(IServiceCollection services)
         {
             services.AddControllers();
             services.AddSwaggerGen(x =>

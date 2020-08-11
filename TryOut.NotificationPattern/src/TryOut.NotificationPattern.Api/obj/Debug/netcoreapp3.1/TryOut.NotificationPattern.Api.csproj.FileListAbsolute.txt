@@ -45,3 +45,4 @@ C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\sr
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.pdb
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.csprojAssemblyReference.cache
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Flunt.dll

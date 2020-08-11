@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6tZUzCij9l5kwD3l1OxoTJls43WZOT8+6tszJIOfZV+inaAEXTXHGbYooIo7i7dYQa0dzD6Ylm+eTem7lkZW1w==",
+  "dgSpecHash": "YV7bza5lrsynZdLPVuAsd6M7EXErEZBSV43jmTdPXT5lSLgsH+jYmTnXu/43+qt0X/DmilNg/KW3LYWMOAhsnA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\TryOut.NotificationPattern.Api\\TryOut.NotificationPattern.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AMcom\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\AMcom\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\AMcom\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\AMcom\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\AMcom\\.nuget\\packages\\mediatr.extensions.autofac.dependencyinjection\\5.3.0\\mediatr.extensions.autofac.dependencyinjection.5.3.0.nupkg.sha512",
     "C:\\Users\\AMcom\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

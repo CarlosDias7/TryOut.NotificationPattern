@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "z6T5atUbLaVqsG17H/kfcTnmNcZ7caYZP289W9onI1Evv/JJThustIbdqj7WCuANCLdx1+FnE97PyFh9pQ4dnQ==",
+  "dgSpecHash": "MKl0x2mZTt/n1PZlfBh6OLyqlPHglXGxpb9fS4eHgIkx1lP46FnfrLrgzVBQf03UPs2U5nL8SFEyM5HSmrXbMw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Carlos Dias\\TryOut.NotificationPattern\\TryOut.NotificationPattern\\src\\Repository\\TryOut.NotificationPattern.Repository\\TryOut.NotificationPattern.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AMcom\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\AMcom\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\AMcom\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512"
   ],
   "logs": []

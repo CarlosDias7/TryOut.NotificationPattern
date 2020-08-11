@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 
-namespace TryOut.NotificationPattern.Domain.Abstractions
+namespace TryOut.NotificationPattern.Domain.Abstractions.FluentValidation
 {
     public abstract class EntityValidatedWithFluentValidation<TId, TEntity, TValidator> : IEntityValidatedWithFluentValidation<TValidator>
         where TId : struct

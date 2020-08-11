@@ -1,14 +1,14 @@
 ﻿using System;
-using TryOut.NotificationPattern.Domain.Abstractions;
+using TryOut.NotificationPattern.Domain.Abstractions.FluentValidation;
 
-namespace TryOut.NotificationPattern.Domain.FluentValidation
+namespace TryOut.NotificationPattern.Domain.Customers.FluentValidation
 {
-    public class Customer : EntityValidatedWithFluentValidation<long, Customer, CustomerValidator>
+    public class CustomerForFluentValidation : EntityValidatedWithFluentValidation<long, CustomerForFluentValidation, CustomerValidator>
     {
         public const short DocumentMaxLength = 11;
         public const short NameMaxLength = 60;
 
-        public Customer(long id, DateTime birth, string document, string name, decimal initialCredits)
+        public CustomerForFluentValidation(long id, DateTime birth, string document, string name, decimal initialCredits)
             : base(id)
         {
             Active = true;
@@ -16,8 +16,6 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
             Document = document;
             Name = name;
             Credits = initialCredits;
-
-            Validate(new CustomerValidator());
         }
 
         public bool Active { get; private set; }
@@ -35,14 +33,6 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
             Credits += value;
         }
 
-        public void ChangeToAdmin()
-        {
-            // TO DO
-            // Put a rule to validate the action. It will be blocked if Active is false.
-
-            Admin = true;
-        }
-
         public void DecressCredits(decimal value)
         {
             // TO DO
@@ -53,7 +43,7 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
 
         public override bool Equals(object obj)
         {
-            if (obj is Customer entityToCompare)
+            if (obj is CustomerForFluentValidation entityToCompare)
                 return entityToCompare.Id == Id;
 
             return false;
@@ -61,12 +51,32 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
 
         public override int GetHashCode() => Id.GetHashCode();
 
-        public void Inative()
+        public void SetActive(bool active)
         {
             // TO DO
             // Put a rule to validate the action. It will be blocked if Admin is true.
 
-            Active = false;
+            Active = active;
         }
+
+        public void SetAdmin(bool admin)
+        {
+            // TO DO
+            // Put a rule to validate the action. It will be blocked if Active is false.
+
+            Admin = admin;
+        }
+
+        public void SetBirth(DateTime birth) => Birth = birth;
+
+        public void SetName(string name) => Name = name;
+
+        public override string ToString()
+            => $@"Customer validated with Fluent Validation.
+                    Id: {Id}
+                    Name: {Name}
+                    Birth: {Birth}
+                    Document: {Document}
+                    {(Admin ? "This Customer is a Admin." : string.Empty)}";
     }
 }

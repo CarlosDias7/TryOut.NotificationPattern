@@ -45,6 +45,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Flunt": {
+              "target": "Package",
+              "version": "[1.0.5, )"
             }
           },
           "imports": [

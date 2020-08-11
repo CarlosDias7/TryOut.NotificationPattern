@@ -3,6 +3,6 @@ C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\sr
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.deps.json
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.dll
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.pdb
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.csproj.CoreCompileInputs.cache
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.dll
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.pdb
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\Domain\TryOut.NotificationPattern.Domain\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Domain.csproj.CoreCompileInputs.cache

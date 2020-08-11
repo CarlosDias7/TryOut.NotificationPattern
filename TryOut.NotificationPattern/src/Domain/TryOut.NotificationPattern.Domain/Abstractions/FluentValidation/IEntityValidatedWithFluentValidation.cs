@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace TryOut.NotificationPattern.Domain.Abstractions
+namespace TryOut.NotificationPattern.Domain.Abstractions.FluentValidation
 {
     public interface IEntityValidatedWithFluentValidation<TValidator>
         where TValidator : IValidator

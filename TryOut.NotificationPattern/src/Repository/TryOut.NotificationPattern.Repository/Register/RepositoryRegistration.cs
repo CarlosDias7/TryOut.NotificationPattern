@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TryOut.NotificationPattern.Domain.FluentValidation;
+using TryOut.NotificationPattern.Domain.Customers.FluentValidation;
+using TryOut.NotificationPattern.Repository.Database;
 using TryOut.NotificationPattern.Repository.FluentValidation;
 
 namespace TryOut.NotificationPattern.Repository.Register
@@ -8,7 +9,8 @@ namespace TryOut.NotificationPattern.Repository.Register
     {
         public static void AddRepository(this IServiceCollection services)
         {
-            services.AddScoped<ICustomerRepository, CustomerRepositoryForFluentValidation>();
+            services.AddScoped<ICustomerRepositoryForFluentValidation, CustomerRepositoryForFluentValidation>();
+            services.AddSingleton<IFakeContext, FakeContext>();
         }
     }
 }

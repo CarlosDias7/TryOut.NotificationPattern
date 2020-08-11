@@ -2,9 +2,9 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace TryOut.NotificationPattern.Domain.FluentValidation
+namespace TryOut.NotificationPattern.Domain.Customers.FluentValidation
 {
-    public class CustomerValidator : AbstractValidator<Customer>
+    public class CustomerValidator : AbstractValidator<CustomerForFluentValidation>
     {
         private const int MajorityAge = 18;
 
@@ -16,6 +16,7 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
                 .WithMessage("Can't set Active.");
 
             RuleFor(x => x.Birth)
+                .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotEmpty()
                 .WithMessage("Can't set Birth.")
                 .LessThan(DateTime.Now)
@@ -36,20 +37,20 @@ namespace TryOut.NotificationPattern.Domain.FluentValidation
             RuleFor(x => x.Name)
                 .NotEmpty()
                 .WithMessage("Can't set Name.")
-                .MaximumLength(Customer.NameMaxLength)
+                .MaximumLength(CustomerForFluentValidation.NameMaxLength)
                 .WithMessage("Can't set Name.");
         }
 
         private bool CustomerMustBeMajor(DateTime birth)
         {
             TimeSpan diffSpan = DateTime.Now - birth;
-            var age = (DateTime.MinValue + diffSpan).Year - 1;
+            var age = (DateTime.MinValue.Add(diffSpan)).Year - 1;
             return age >= MajorityAge;
         }
 
         private bool ValidateDocumentFormat(string document)
         {
-            var regex = new Regex($@"[0-9]{Customer.DocumentMaxLength}$");
+            var regex = new Regex("[0-9]{" + CustomerForFluentValidation.DocumentMaxLength + "}$");
             return regex.IsMatch(document);
         }
     }

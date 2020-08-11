@@ -23,6 +23,14 @@
           }
         }
       },
+      "Flunt/1.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -33,7 +41,8 @@
       },
       "TryOut.NotificationPattern.Domain/1.0.0": {
         "dependencies": {
-          "FluentValidation": "9.0.1"
+          "FluentValidation": "9.0.1",
+          "Flunt": "1.0.5"
         },
         "runtime": {
           "TryOut.NotificationPattern.Domain.dll": {}
@@ -53,6 +62,13 @@
       "sha512": "sha512-GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
       "path": "fluentvalidation/9.0.1",
       "hashPath": "fluentvalidation.9.0.1.nupkg.sha512"
+    },
+    "Flunt/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2p1B/LLsMf0bGwyMQK48/278OXTodXn3HyTU1v7fr/x0bNfrVSNC1Do1PxbgiOlDLChtAbtt1kPgXFqUnGAagg==",
+      "path": "flunt/1.0.5",
+      "hashPath": "flunt.1.0.5.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
       "type": "package",
