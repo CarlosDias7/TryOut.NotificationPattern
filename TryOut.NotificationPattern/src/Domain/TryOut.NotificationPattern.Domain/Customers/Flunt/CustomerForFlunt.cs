@@ -4,7 +4,7 @@ using TryOut.NotificationPattern.Domain.Abstractions.Flunt;
 
 namespace TryOut.NotificationPattern.Domain.Customers.Flunt
 {
-    public class CustomerForFlunt : EntityValidatedWithFlunt<long>
+    public class CustomerForFlunt : EntityValidatedWithFlunt<long>, ICustomerForFlunt
     {
         public const short DocumentMaxLength = 11;
         public const short NameMaxLength = 60;
@@ -75,6 +75,8 @@ namespace TryOut.NotificationPattern.Domain.Customers.Flunt
             AddNotifications(new Contract()
                 .IsNullOrEmpty(name, nameof(Name), "Name must be informed.")
                 .HasMaxLen(name, NameMaxLength, nameof(Name), $"The name must have until {NameMaxLength} characters "));
+
+            if (Valid) Name = name;
         }
 
         protected override void SetId(long id)

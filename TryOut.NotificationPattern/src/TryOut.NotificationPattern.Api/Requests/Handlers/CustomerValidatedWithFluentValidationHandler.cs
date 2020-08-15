@@ -9,13 +9,13 @@ using TryOut.NotificationPattern.Domain.Customers.FluentValidation;
 
 namespace TryOut.NotificationPattern.Api.Handlers
 {
-    public class CreateCustomerValidatedWithFluentValidationHandler : IRequestHandler<CreateCustomerWithFluentValidationCommand, long?>,
-                                                                      IRequestHandler<GetCustomerByIdWithFluentValidationQuery, string>
+    public class CustomerValidatedWithFluentValidationHandler : IRequestHandler<CreateCustomerWithFluentValidationCommand, long?>,
+                                                                IRequestHandler<GetCustomerByIdWithFluentValidationQuery, string>
     {
         private readonly ICustomerRepositoryForFluentValidation _customerRepositoryForFluentValidation;
         private readonly INotificationContextForFluentValidation _notificationContextForFluentValidation;
 
-        public CreateCustomerValidatedWithFluentValidationHandler(ICustomerRepositoryForFluentValidation customerRepositoryForFluentValidation,
+        public CustomerValidatedWithFluentValidationHandler(ICustomerRepositoryForFluentValidation customerRepositoryForFluentValidation,
             INotificationContextForFluentValidation notificationContextForFluentValidation)
         {
             _customerRepositoryForFluentValidation = customerRepositoryForFluentValidation;
@@ -69,7 +69,7 @@ namespace TryOut.NotificationPattern.Api.Handlers
                 var customer = await _customerRepositoryForFluentValidation.GetAsync(request.Id);
                 if (customer is null)
                 {
-                    _notificationContextForFluentValidation.AddNotification(new Notification("404", "Customer can't be find."));
+                    _notificationContextForFluentValidation.AddNotification("404", "Customer can't be find.");
                     return default;
                 }
 

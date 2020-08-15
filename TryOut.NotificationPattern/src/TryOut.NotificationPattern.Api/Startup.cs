@@ -12,6 +12,7 @@ using System.Globalization;
 using System.Reflection;
 using TryOut.NotificationPattern.Api.Filters;
 using TryOut.NotificationPattern.Api.Notifications.FluentValidation;
+using TryOut.NotificationPattern.Api.Notifications.Flunt;
 using TryOut.NotificationPattern.Repository.Register;
 
 namespace TryOut.NotificationPattern.Api
@@ -70,6 +71,7 @@ namespace TryOut.NotificationPattern.Api
         private void ConfigureNotification(IServiceCollection services)
         {
             services.AddScoped<INotificationContextForFluentValidation, NotificationContextForFluentValidation>();
+            services.AddScoped<INotificationContextForFlunt, NotificationContextForFlunt>();
         }
 
         private void ConfigureSwagger(IServiceCollection services)
@@ -77,7 +79,15 @@ namespace TryOut.NotificationPattern.Api
             services.AddControllers();
             services.AddSwaggerGen(x =>
             {
-                x.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "TryOut.NotificationPattern", Version = "v1" });
+                x.SwaggerDoc
+                (
+                    name: "v1",
+                    new OpenApiInfo
+                    {
+                        Title = "TryOut.NotificationPattern - Version 1",
+                        Description = "A simple POC to use Fluent Validation library and Flunt library as Notification Pattern.",
+                        Version = "v1"
+                    });
             });
         }
     }

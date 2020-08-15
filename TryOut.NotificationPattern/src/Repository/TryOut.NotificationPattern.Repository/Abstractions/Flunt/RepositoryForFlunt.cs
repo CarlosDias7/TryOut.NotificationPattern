@@ -1,19 +1,17 @@
-﻿using FluentValidation;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TryOut.NotificationPattern.Domain.Abstractions.FluentValidation;
+using TryOut.NotificationPattern.Domain.Customers.Flunt;
 using TryOut.NotificationPattern.Repository.Database;
 
-namespace TryOut.NotificationPattern.Repository.Abstractions
+namespace TryOut.NotificationPattern.Repository.Abstractions.Flunt
 {
-    public abstract class RepositoryForFluentValidation<TEntity, TValidator>
-        where TEntity : class, IEntityValidatedWithFluentValidation<TValidator>
-        where TValidator : AbstractValidator<TEntity>, new()
+    public class RepositoryForFlunt<TEntity>
+        where TEntity : class, ICustomerForFlunt
     {
         private readonly IFakeContext _fakeContext;
 
-        public RepositoryForFluentValidation(IFakeContext fakeContext)
+        public RepositoryForFlunt(IFakeContext fakeContext)
         {
             _fakeContext = fakeContext;
         }
@@ -28,8 +26,7 @@ namespace TryOut.NotificationPattern.Repository.Abstractions
         public async Task<bool> SaveAsync(TEntity entity)
         {
             if (entity is null) return false;
-            entity.Validate(new TValidator());
-            if (!entity.Valid) return false;
+            if (entity.Invalid) return false;
 
             _fakeContext.SetEntity<TEntity>().Remove(entity);
             _fakeContext.SetEntity<TEntity>().Add(entity);

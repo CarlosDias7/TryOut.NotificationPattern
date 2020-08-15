@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using TryOut.NotificationPattern.Domain.Customers.FluentValidation;
-using TryOut.NotificationPattern.Repository.Abstractions;
+using TryOut.NotificationPattern.Repository.Abstractions.FluentValidation;
 using TryOut.NotificationPattern.Repository.Database;
 
-namespace TryOut.NotificationPattern.Repository.FluentValidation
+namespace TryOut.NotificationPattern.Repository.Customers.FluentValidation
 {
     public class CustomerRepositoryForFluentValidation : RepositoryForFluentValidation<CustomerForFluentValidation, CustomerValidator>, ICustomerRepositoryForFluentValidation
     {
