@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using TryOut.NotificationPattern.Domain.Customers.Flunt;
+using TryOut.NotificationPattern.Domain.Abstractions.Flunt;
 using TryOut.NotificationPattern.Repository.Database;
 
 namespace TryOut.NotificationPattern.Repository.Abstractions.Flunt
 {
     public class RepositoryForFlunt<TEntity>
-        where TEntity : class, ICustomerForFlunt
+        where TEntity : class, IEntityValidatedWithFlunt
     {
         private readonly IFakeContext _fakeContext;
 

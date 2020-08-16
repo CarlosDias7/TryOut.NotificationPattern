@@ -4,7 +4,7 @@ using TryOut.NotificationPattern.Domain.Abstractions.Flunt;
 
 namespace TryOut.NotificationPattern.Domain.Customers.Flunt
 {
-    public class CustomerForFlunt : EntityValidatedWithFlunt<long>, ICustomerForFlunt
+    public class CustomerForFlunt : EntityValidatedWithFlunt<long>, IEntityValidatedWithFlunt
     {
         public const short DocumentMaxLength = 11;
         public const short NameMaxLength = 60;

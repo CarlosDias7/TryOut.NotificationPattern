@@ -2,6 +2,7 @@
 {
     public interface IEntityValidatedWithFlunt
     {
+        bool Invalid { get; }
         bool Valid { get; }
     }
 }

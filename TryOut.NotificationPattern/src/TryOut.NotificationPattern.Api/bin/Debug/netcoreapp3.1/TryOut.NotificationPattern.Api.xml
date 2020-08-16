@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TryOut.NotificationPattern.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TryOut.NotificationPattern.Api.Controllers.v1.Customers.CustomerForFluentValidationController.GetAsync(TryOut.NotificationPattern.Api.Requests.Queries.FluentValidation.GetCustomerByIdWithFluentValidationQuery,System.Threading.CancellationToken)">
+             <summary>
+             Finds a Customer.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/v1/customer/fluent-validation
+                 {
+                    "id": 1
+                 }
+            
+             </remarks>
+             <param name="query"></param>
+             <param name="cancellationToken"></param>
+             <returns>A string that describe the Customer selected.</returns>
+             <response code="200">If the Customer has been find.</response>
+             <response code="400">If the validation failed or the Customer doesn't exist in context.</response>
+        </member>
+        <member name="M:TryOut.NotificationPattern.Api.Controllers.v1.Customers.CustomerForFluentValidationController.PostAsync(TryOut.NotificationPattern.Api.Commands.FluentValidation.CreateCustomerWithFluentValidationCommand,System.Threading.CancellationToken)">
+             <summary>
+             Creates a Customer.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /api/v1/customer/fluent-validation
+                 {
+                     "birth": "1990-08-16T21:51:33.252Z",
+                     "credits": 100,
+                     "document": "012345678901",
+                     "id": 1,
+                     "name": "Carlos Dias"
+                 }
+             </remarks>
+             <param name="command"></param>
+             <param name="cancellationToken"></param>
+             <returns>A ID of the Customer created.</returns>
+             <response code="200">Returns the newly created item.</response>
+             <response code="400">If the validation failed.</response>
+        </member>
+        <member name="M:TryOut.NotificationPattern.Api.Controllers.v1.Customers.Flunt.CustomerForFluntController.GetAsync(TryOut.NotificationPattern.Api.Requests.Queries.Flunt.GetCustomerByIdWithFluntQuery,System.Threading.CancellationToken)">
+            <summary>
+            Find a Customer.
+            </summary>
+            <param name="command"></param>
+            <returns>A string that describe the Customer selected.</returns>
+            <response code="200">If the Customer has been find.</response>
+            <response code="400">If the validation failed or the Customer doesn't exist in context.</response>
+        </member>
+        <member name="M:TryOut.NotificationPattern.Api.Controllers.v1.Customers.Flunt.CustomerForFluntController.PostAsync(TryOut.NotificationPattern.Api.Commands.Flunt.CreateCustomerWithFluntCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a Customer.
+            </summary>
+            <param name="command"></param>
+            <returns>A ID of the Customer created.</returns>
+            <response code="200">Returns the newly created item.</response>
+            <response code="400">If the validation failed.</response>
+        </member>
+    </members>
+</doc>

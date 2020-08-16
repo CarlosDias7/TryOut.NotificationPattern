@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
-using TryOut.NotificationPattern.Api.Commands.FluentValidation;
+using TryOut.NotificationPattern.Api.Commands.Flunt;
 using TryOut.NotificationPattern.Api.Controllers.v1.Abstractions;
-using TryOut.NotificationPattern.Api.Requests.Queries.FluentValidation;
+using TryOut.NotificationPattern.Api.Requests.Queries.Flunt;
 
-namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
+namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers.Flunt
 {
-    [Route("api/v{version:apiVersion}/customer/fluent-validation")]
-    public class CustomerForFluentValidationController : ApiV1Controller
+    [Route("api/v{version:apiVersion}/customer/flunt")]
+    public class CustomerForFluntController : ApiV1Controller
     {
         private readonly IMediator _mediator;
 
-        public CustomerForFluentValidationController(IMediator mediator)
+        public CustomerForFluntController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -40,7 +40,7 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
         [Produces("text/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> GetAsync([FromQuery] GetCustomerByIdWithFluentValidationQuery query, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetAsync([FromQuery] GetCustomerByIdWithFluntQuery query, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(query, cancellationToken);
             return Ok(result);
@@ -52,7 +52,7 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
         /// <remarks>
         /// Sample request:
         ///
-        ///     POST /api/v1/customer/fluent-validation
+        ///     POST /api/v1/customer/flunt
         ///     {
         ///         "birth": "1990-08-16T21:51:33.252Z",
         ///         "credits": 100,
@@ -64,16 +64,16 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
         /// <param name="command"></param>
         /// <param name="cancellationToken"></param>
         /// <returns>A ID of the Customer created.</returns>
-        /// <response code="200">Returns the newly created item.</response>
+        /// <response code="200">Returns the new created item.</response>
         /// <response code="400">If the validation failed.</response>
         [HttpPost]
-        [Produces("text/json")]
+        [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> PostAsync([FromBody] CreateCustomerWithFluentValidationCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> PostAsync([FromBody] CreateCustomerWithFluntCommand command, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(command, cancellationToken);
-            return Ok($"Customer created! ID: {result}.");
+            return Ok(result);
         }
     }
 }

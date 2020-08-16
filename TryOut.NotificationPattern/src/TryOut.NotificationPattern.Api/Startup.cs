@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Globalization;
+using System.IO;
 using System.Reflection;
 using TryOut.NotificationPattern.Api.Filters;
 using TryOut.NotificationPattern.Api.Notifications.FluentValidation;
@@ -86,8 +88,17 @@ namespace TryOut.NotificationPattern.Api
                     {
                         Title = "TryOut.NotificationPattern - Version 1",
                         Description = "A simple POC to use Fluent Validation library and Flunt library as Notification Pattern.",
-                        Version = "v1"
+                        Version = "v1",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Carlos Dias",
+                            Url = new Uri("https://github.com/CarlosDias7")
+                        },
                     });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                x.IncludeXmlComments(xmlPath);
             });
         }
     }

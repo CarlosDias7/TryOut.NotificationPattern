@@ -5,7 +5,7 @@ using TryOut.NotificationPattern.Domain.Customers.Flunt;
 
 namespace TryOut.NotificationPattern.Repository.Database
 {
-    internal class FakeContext : IFakeContext
+    internal sealed class FakeContext : IFakeContext
     {
         private readonly List<CustomerForFluentValidation> _dbSetCustomersForFluentValidation;
         private readonly List<CustomerForFlunt> _dbSetCustomersForFlunt;
@@ -24,6 +24,10 @@ namespace TryOut.NotificationPattern.Repository.Database
         {
             if (typeof(TEntity) == typeof(CustomerForFluentValidation))
                 return _dbSetCustomersForFluentValidation as List<TEntity>;
+
+            if (typeof(TEntity) == typeof(CustomerForFlunt))
+                return _dbSetCustomersForFlunt as List<TEntity>;
+
             throw new ArgumentException("The specified type is invalid.");
         }
     }

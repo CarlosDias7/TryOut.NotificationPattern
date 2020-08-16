@@ -32,9 +32,6 @@ C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\sr
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.pdb
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\MediatR.Extensions.Autofac.DependencyInjection.dll
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.csproj.CoreCompileInputs.cache
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.dll
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.pdb
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.genruntimeconfig.cache
@@ -46,3 +43,8 @@ C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\sr
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.csprojAssemblyReference.cache
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\Flunt.dll
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.csproj.CoreCompileInputs.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\bin\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.xml
+C:\Projects\Carlos Dias\TryOut.NotificationPattern\TryOut.NotificationPattern\src\TryOut.NotificationPattern.Api\obj\Debug\netcoreapp3.1\TryOut.NotificationPattern.Api.xml
