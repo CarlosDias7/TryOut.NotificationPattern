@@ -4,13 +4,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using TryOut.NotificationPattern.Api.Commands.Flunt;
 using TryOut.NotificationPattern.Api.Notifications.Flunt;
+using TryOut.NotificationPattern.Api.Requests.Commands.Flunt;
 using TryOut.NotificationPattern.Api.Requests.Queries.Flunt;
 using TryOut.NotificationPattern.Domain.Customers.Flunt;
 
 namespace TryOut.NotificationPattern.Api.Requests.Handlers
 {
     public class CustomerValidatedWithFluntHandler : IRequestHandler<CreateCustomerWithFluntCommand, long?>,
-                                                     IRequestHandler<GetCustomerByIdWithFluntQuery, string>
+                                                     IRequestHandler<GetCustomerByIdWithFluntQuery, string>,
+                                                     IRequestHandler<DeleteCustomerWithFluntCommand, bool>
     {
         private readonly ICustomerRepositoryForFlunt _customerRepositoryForFlunt;
         private readonly INotificationContextForFlunt _notificationContextForFlunt;
@@ -29,6 +31,12 @@ namespace TryOut.NotificationPattern.Api.Requests.Handlers
                 if (request is null)
                 {
                     _notificationContextForFlunt.AddNotification("Request Invalid", "The request command must be informed.");
+                    return default;
+                }
+
+                if (await _customerRepositoryForFlunt.AnyAsync(request.Id))
+                {
+                    _notificationContextForFlunt.AddNotification("Request Invalid", $"There already cadastred a Customer with Id {request.Id}.");
                     return default;
                 }
 
@@ -79,6 +87,32 @@ namespace TryOut.NotificationPattern.Api.Requests.Handlers
             {
                 _notificationContextForFlunt.AddNotification(ex.GetType().Name, ex.InnerException?.Message ?? ex.Message);
                 return null;
+            }
+        }
+
+        public async Task<bool> Handle(DeleteCustomerWithFluntCommand request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                if (request is null)
+                {
+                    _notificationContextForFlunt.AddNotification("Request Invalid", "The request query must be informed.");
+                    return false;
+                }
+
+                var entity = await _customerRepositoryForFlunt.GetAsync(request.Id);
+                if (entity is null)
+                {
+                    _notificationContextForFlunt.AddNotification("Request Invalid", $"Customer with Id {request.Id} not found.");
+                    return false;
+                }
+
+                return await _customerRepositoryForFlunt.DeleteAsync(entity);
+            }
+            catch (Exception ex)
+            {
+                _notificationContextForFlunt.AddNotification(ex.GetType().Name, ex.InnerException?.Message ?? ex.Message);
+                return false;
             }
         }
     }

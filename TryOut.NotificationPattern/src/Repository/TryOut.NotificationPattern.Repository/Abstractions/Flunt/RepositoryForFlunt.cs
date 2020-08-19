@@ -33,6 +33,12 @@ namespace TryOut.NotificationPattern.Repository.Abstractions.Flunt
             return await Task.FromResult(true);
         }
 
+        protected async Task<bool> AnyAsync(Func<TEntity, bool> predicate)
+        {
+            var result = _fakeContext.SetEntity<TEntity>().Any(predicate);
+            return await Task.FromResult(result);
+        }
+
         protected async Task<TEntity> GetAsync(Func<TEntity, bool> predicate)
         {
             var result = _fakeContext.SetEntity<TEntity>().FirstOrDefault(predicate);

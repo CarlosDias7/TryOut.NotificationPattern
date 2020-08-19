@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TryOut.NotificationPattern.Api.Commands.Flunt;
 using TryOut.NotificationPattern.Api.Controllers.v1.Abstractions;
+using TryOut.NotificationPattern.Api.Requests.Commands.Flunt;
 using TryOut.NotificationPattern.Api.Requests.Queries.Flunt;
 
 namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers.Flunt
@@ -20,12 +21,38 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers.Flunt
         }
 
         /// <summary>
+        /// Deletes a Customer.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     DELETE /api/v1/customer/flunt
+        ///     {
+        ///        "id": 1
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="command"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>A string that describe the result of the action.</returns>
+        /// <response code="200">If the Customer has been deleted.</response>
+        /// <response code="400">If the validation failed or the Customer doesn't exist in context.</response>
+        [HttpDelete]
+        [Produces("text/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteAsync([FromBody] DeleteCustomerWithFluntCommand command, CancellationToken cancellationToken)
+            => await _mediator.Send(command, cancellationToken)
+                ? Ok("Customer deleted!")
+                : (IActionResult)BadRequest("Can't delete the Customer!");
+
+        /// <summary>
         /// Finds a Customer.
         /// </summary>
         /// <remarks>
         /// Sample request:
         ///
-        ///     GET /api/v1/customer/fluent-validation
+        ///     GET /api/v1/customer/flunt
         ///     {
         ///        "id": 1
         ///     }

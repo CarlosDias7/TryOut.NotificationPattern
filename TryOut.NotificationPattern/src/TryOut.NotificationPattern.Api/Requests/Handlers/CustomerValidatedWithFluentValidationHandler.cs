@@ -4,13 +4,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using TryOut.NotificationPattern.Api.Commands.FluentValidation;
 using TryOut.NotificationPattern.Api.Notifications.FluentValidation;
+using TryOut.NotificationPattern.Api.Requests.Commands.FluentValidation;
 using TryOut.NotificationPattern.Api.Requests.Queries.FluentValidation;
 using TryOut.NotificationPattern.Domain.Customers.FluentValidation;
 
 namespace TryOut.NotificationPattern.Api.Handlers
 {
     public class CustomerValidatedWithFluentValidationHandler : IRequestHandler<CreateCustomerWithFluentValidationCommand, long?>,
-                                                                IRequestHandler<GetCustomerByIdWithFluentValidationQuery, string>
+                                                                IRequestHandler<GetCustomerByIdWithFluentValidationQuery, string>,
+                                                                IRequestHandler<DeleteCustomerWithFluentValidationCommand, bool>
     {
         private readonly ICustomerRepositoryForFluentValidation _customerRepositoryForFluentValidation;
         private readonly INotificationContextForFluentValidation _notificationContextForFluentValidation;
@@ -29,6 +31,12 @@ namespace TryOut.NotificationPattern.Api.Handlers
                 if (request is null)
                 {
                     _notificationContextForFluentValidation.AddNotification("Request Invalid", "The request command must be informed.");
+                    return default;
+                }
+
+                if (await _customerRepositoryForFluentValidation.AnyAsync(request.Id))
+                {
+                    _notificationContextForFluentValidation.AddNotification("Request Invalid", $"There already cadastred a Customer with Id {request.Id}.");
                     return default;
                 }
 
@@ -79,6 +87,32 @@ namespace TryOut.NotificationPattern.Api.Handlers
             {
                 _notificationContextForFluentValidation.AddNotification(ex.GetType().Name, ex.InnerException?.Message ?? ex.Message);
                 return null;
+            }
+        }
+
+        public async Task<bool> Handle(DeleteCustomerWithFluentValidationCommand request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                if (request is null)
+                {
+                    _notificationContextForFluentValidation.AddNotification("Request Invalid", "The request query must be informed.");
+                    return false;
+                }
+
+                var entity = await _customerRepositoryForFluentValidation.GetAsync(request.Id);
+                if (entity is null)
+                {
+                    _notificationContextForFluentValidation.AddNotification("Request Invalid", $"Customer with Id {request.Id} not found.");
+                    return false;
+                }
+
+                return await _customerRepositoryForFluentValidation.DeleteAsync(entity);
+            }
+            catch (Exception ex)
+            {
+                _notificationContextForFluentValidation.AddNotification(ex.GetType().Name, ex.InnerException?.Message ?? ex.Message);
+                return false;
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TryOut.NotificationPattern.Api.Commands.FluentValidation;
 using TryOut.NotificationPattern.Api.Controllers.v1.Abstractions;
+using TryOut.NotificationPattern.Api.Requests.Commands.FluentValidation;
 using TryOut.NotificationPattern.Api.Requests.Queries.FluentValidation;
 
 namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
@@ -18,6 +19,32 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
         {
             _mediator = mediator;
         }
+
+        /// <summary>
+        /// Deletes a Customer.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     DELETE /api/v1/customer/fluent-validation
+        ///     {
+        ///        "id": 1
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="command"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>A string that describe the result of the action.</returns>
+        /// <response code="200">If the Customer has been deleted.</response>
+        /// <response code="400">If the validation failed or the Customer doesn't exist in context.</response>
+        [HttpDelete]
+        [Produces("text/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteAsync([FromBody] DeleteCustomerWithFluentValidationCommand command, CancellationToken cancellationToken)
+            => await _mediator.Send(command, cancellationToken)
+                ? Ok("Customer deleted!")
+                : (IActionResult)BadRequest("Can't delete the Customer!");
 
         /// <summary>
         /// Finds a Customer.
@@ -65,7 +92,7 @@ namespace TryOut.NotificationPattern.Api.Controllers.v1.Customers
         /// <param name="cancellationToken"></param>
         /// <returns>A ID of the Customer created.</returns>
         /// <response code="200">Returns the newly created item.</response>
-        /// <response code="400">If the validation failed.</response>
+        /// <response code="400">If the validation failed or the Customer has already exist in context.</response>
         [HttpPost]
         [Produces("text/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]

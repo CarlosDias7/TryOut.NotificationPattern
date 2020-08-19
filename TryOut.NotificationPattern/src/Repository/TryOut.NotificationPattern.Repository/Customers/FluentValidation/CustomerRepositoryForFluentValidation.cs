@@ -12,6 +12,8 @@ namespace TryOut.NotificationPattern.Repository.Customers.FluentValidation
         {
         }
 
+        public async Task<bool> AnyAsync(long id) => await AnyAsync(x => x.Id == id);
+
         public async Task<CustomerForFluentValidation> GetAsync(long id) => await GetAsync(x => x.Id == id);
     }
 }

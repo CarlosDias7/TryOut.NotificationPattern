@@ -12,6 +12,8 @@ namespace TryOut.NotificationPattern.Repository.Customers.Flunt
         {
         }
 
+        public async Task<bool> AnyAsync(long id) => await AnyAsync(x => x.Id == id);
+
         public async Task<CustomerForFlunt> GetAsync(long id) => await GetAsync(x => x.Id == id);
     }
 }

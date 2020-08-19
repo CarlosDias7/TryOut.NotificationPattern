@@ -21,8 +21,7 @@ namespace TryOut.NotificationPattern.Repository.Abstractions.FluentValidation
         public async Task<bool> DeleteAsync(TEntity entity)
         {
             if (entity is null) return false;
-            _fakeContext.SetEntity<TEntity>().Remove(entity);
-            return await Task.FromResult(true);
+            return await Task.FromResult(_fakeContext.SetEntity<TEntity>().Remove(entity));
         }
 
         public async Task<bool> SaveAsync(TEntity entity)
@@ -34,6 +33,12 @@ namespace TryOut.NotificationPattern.Repository.Abstractions.FluentValidation
             _fakeContext.SetEntity<TEntity>().Remove(entity);
             _fakeContext.SetEntity<TEntity>().Add(entity);
             return await Task.FromResult(true);
+        }
+
+        protected async Task<bool> AnyAsync(Func<TEntity, bool> predicate)
+        {
+            var result = _fakeContext.SetEntity<TEntity>().Any(predicate);
+            return await Task.FromResult(result);
         }
 
         protected async Task<TEntity> GetAsync(Func<TEntity, bool> predicate)
